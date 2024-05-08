@@ -7,9 +7,19 @@ const cors = require('cors');
 const routes = require('./routes/index.router');
 const app = express();
 
-const corsOptions = {
-    origin: "http://localhost:3000" // frontend URI (ReactJS)
-}
+const corsOpts = {
+    origin: '*',
+
+    methods: [
+        'GET',
+        'POST',
+    ],
+
+    allowedHeaders: [
+        'Content-Type',
+    ],
+};
+
 app.use(cors(corsOptions));
 app.use('/api', routes);
 
