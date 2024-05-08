@@ -4,7 +4,7 @@ import CartIcon from "./Icons/CartIcon";
 const Product = () => {
     const [productData, setProduct] = useState("");
     useEffect(() => {
-        fetch("http://localhost:4000/api/products/663ba6ef8641a65fe20887d8")
+        fetch("https://products-listing.onrender.com/api/products/663ba6ef8641a65fe20887d8")
             .then((res) => res.json())
             .then((data) => setProduct(data.product));
     }, [])
