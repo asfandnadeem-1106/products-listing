@@ -1,0 +1,24 @@
+{
+  "name": "products-listing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "cd backend && npm install",
+    "start-server": "cd backend && node app.js",
+    "install-client": "cd frontend && npm install",
+    "build-client": "cd frontend && npm run build",
+    "start-client": "cd frontend && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asfandnadeem-1106/products-listing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asfandnadeem-1106/products-listing/issues"
+  },
+  "homepage": "https://github.com/asfandnadeem-1106/products-listing#readme"
+}

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import CartIcon from "./Icons/CartIcon";
 
 const Product = () => {
-   const [productData, setProduct] = useState("");
+    const [productData, setProduct] = useState("");
     useEffect(() => {
         fetch("http://localhost:4000/api/products/663ba6ef8641a65fe20887d8")
-          .then((res) => res.json())
-          .then((data) => setProduct(data.product));
-      }, [])
+            .then((res) => res.json())
+            .then((data) => setProduct(data.product));
+    }, [])
     return (
         <section className="core">
             <div className="gallery-holder hide-in-mobile">
@@ -16,6 +16,9 @@ const Product = () => {
                         <img src={productData.image} alt="product-1" />
                     </div>
                 </div>
+            </div>
+            <div className="mobile-gallery hide-in-desktop">
+                <img src={productData.image} alt="featured-product" />
             </div>
 
             <div className="description">
