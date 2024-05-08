@@ -7,7 +7,7 @@ const cors = require('cors');
 const routes = require('./routes/index.router');
 const app = express();
 
-const corsOpts = {
+const corsOptions = {
     origin: '*',
 
     methods: [
