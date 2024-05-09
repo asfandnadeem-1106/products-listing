@@ -7,16 +7,16 @@ const Footer = () => {
             <section className="footer">
                 <ul>
                     <li><p>Product</p></li>
-                    <li class="footer-links">Coding</li>
-                    <li class="footer-links">Prototyping</li>
-                    <li class="footer-links">Knowledge Sharing</li>
-                    <li class="footer-links">Feedback</li>
+                    <li class="footer-links">Mobiles</li>
+                    <li class="footer-links">Laptops</li>
+                    <li class="footer-links">Hard Drives</li>
+                    <li class="footer-links">Controllers</li>
                     <li class="footer-links">What’s New</li>
                 </ul>
                 <ul>
                     <li><p>Explore</p></li>
-                    <li class="footer-links">Featured Sandboxes</li>
-                    <li class="footer-links">Search Sandboxes</li>
+                    <li class="footer-links">Featured Items</li>
+                    <li class="footer-links">Search Items</li>
                 </ul>
                 <ul>
                     <li><p>For</p></li>
