@@ -1,46 +1,24 @@
 import React, { useState, useEffect } from "react";
-import CartIcon from "./Icons/CartIcon";
+import  { CircularProgress } from "@mui/material";
+import Description from "./Description";
 
 const Product = () => {
+    const [spinner, setSpinner] = useState(true);
+    // setSpinner(true)
     const [productData, setProduct] = useState("");
     useEffect(() => {
         fetch("https://products-listing.onrender.com/api/products/663ba6ef8641a65fe20887d8")
             .then((res) => res.json())
-            .then((data) => setProduct(data.product));
+            .then((data) => {
+                setProduct(data.product)
+                setSpinner(false)
+            }
+        );
     }, [])
     return (
         <section className="core">
-            <div className="gallery-holder hide-in-mobile">
-                <div className="gallery">
-                    <div className="image">
-                        <img src={productData.image} alt="product-1" />
-                    </div>
-                </div>
-            </div>
-            <div className="mobile-gallery hide-in-desktop">
-                <img src={productData.image} alt="featured-product" />
-            </div>
-
-            <div className="description">
-                <p className="pre">{productData.title}</p>
-                <h1>{productData.name}</h1>
-                <p className="desc">
-                    {productData.description}
-                </p>
-                <div className="price">
-                    <div className="main-tag">
-                        <p>{productData.price}</p>
-                    </div>
-                </div>
-                <div className="buttons">
-                    <button
-                        className="add-to-cart"
-                    >
-                        <CartIcon />
-                        add to cart
-                    </button>
-                </div>
-            </div>
+            {spinner && ( <div className="loader"> <CircularProgress/>  </div>)}
+            {!spinner && (<Description productData={productData}/>)}
         </section>
 
     );

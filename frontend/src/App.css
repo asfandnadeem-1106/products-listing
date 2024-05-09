@@ -164,6 +164,27 @@ header nav .right img {
   }
 }
 
+.core-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  gap: 100px;
+}
+@media (max-width: 992px) {
+  .core-description {
+    gap: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .core-description {
+    width: unset;
+    margin: unset;
+    flex-direction: column;
+    gap: unset;
+  }
+}
+
 .description {
   flex-basis: 50%;
   display: flex;
@@ -374,6 +395,12 @@ header nav .right img {
   opacity: 1;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
 
 footer {
   display: flex;
